@@ -26,6 +26,7 @@ class Scraper
       course = Course.new
       course.title = element.css("h2").text
       course.schedule = element.css("em").text
+      course.description = element.css("p").text
     end
     # Create instances of Courses using the data
     
