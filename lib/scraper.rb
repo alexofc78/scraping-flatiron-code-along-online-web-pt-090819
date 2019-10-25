@@ -25,7 +25,7 @@ class Scraper
     get_courses.css("h2"). each do |element|
       course = Course.new
       course.title = element.css("h2").text
-      course.schedule = element.css("h2").text
+      course.schedule = element.css("em").text
     end
     # Create instances of Courses using the data
     
