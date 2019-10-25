@@ -22,7 +22,7 @@ class Scraper
 #    binding.pry
     get_courses.css("#course-grid.block") # 1) Need a new selector; 2) Iterate
     
-    get_courses.css(".h2"). each do |element|
+    get_courses.css("h2"). each do |element|
       course = Course.new
       course.title = element.css(".h2").text
     end
